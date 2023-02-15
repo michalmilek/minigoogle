@@ -5,4 +5,4 @@
 <a href="https://ibb.co/ZV8wrWd"><img src="https://i.ibb.co/qds48kB/img2.png" alt="img2" border="0"></a>
 </div>
 
-<h2 align="center"><a>href="https://minigoogle.vercel.app">Visit</a></h2>
+<h2 align="center"><a href="https://minigoogle.vercel.app">Visit</a></h2>
