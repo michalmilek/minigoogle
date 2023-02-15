@@ -25,9 +25,7 @@ const SearchHeader = ({ selected }: Props) => {
     e.preventDefault();
     const term = inputSearchRef.current?.value;
     if (!term?.trim()) return;
-    router.push(
-      `/search?term=${term.trim()}&searchType=${router.query.searchType}`
-    );
+    router.push(`/search?term=${term.trim()}&searchType=${selected}`);
   };
 
   return (

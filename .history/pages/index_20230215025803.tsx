@@ -18,8 +18,8 @@ export default function Home() {
     e.preventDefault();
     const randomWord = await fetch(
       `https://random-word-api.herokuapp.com/word?number=1`
-    ).then((response) => response.json());
-    console.log(randomWord);
+    );
+
     if (!randomWord) return;
     else return router.push(`/search?term=${randomWord}&searchType=`);
   };

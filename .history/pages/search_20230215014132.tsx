@@ -12,7 +12,6 @@ import ImageResults from "@/components/ImageResults";
 const search = ({ results }: any) => {
   const router = useRouter();
   const [selected, setSelected] = useState(router.query.searchType || "All");
-  console.log(selected);
   return (
     <div className="flex flex-col">
       <Head>
@@ -31,7 +30,7 @@ const search = ({ results }: any) => {
         />
       </Head>
 
-      <SearchHeader selected={selected} />
+      <SearchHeader />
       <SearchOptions
         selected={selected}
         setSelected={setSelected}

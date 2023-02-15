@@ -3,13 +3,9 @@ import SearchOption from "./SearchOption";
 import { MagnifyingGlassIcon, PhotoIcon } from "@heroicons/react/24/outline";
 import { useRouter } from "next/router";
 
-type Props = {
-  selected: string | string[] | undefined;
-  setSelected: React.Dispatch<React.SetStateAction<string | string[]>>;
-};
-
-const SearchOptions = ({ selected, setSelected }: Props) => {
+const SearchOptions = () => {
   const router = useRouter();
+  const [selected, setSelected] = useState(router.query.searchType || "All");
   return (
     <div className="flex gap-6 select-none w-full justify-center mt-10">
       <SearchOption

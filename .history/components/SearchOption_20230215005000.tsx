@@ -17,8 +17,8 @@ type props = {
       titleId?: string | undefined;
     }
   >;
-  selected: string | string[] | undefined;
-  setSelected: React.Dispatch<React.SetStateAction<string | string[]>>;
+  selected: string;
+  setSelected: Dispatch<SetStateAction<string>>;
 };
 
 const SearchOption = ({ title, Icon, selected, setSelected }: props) => {

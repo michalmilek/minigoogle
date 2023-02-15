@@ -1,6 +1,6 @@
 import SearchHeader from "@/components/SearchHeader";
 import Head from "next/head";
-import React, { useState } from "react";
+import React from "react";
 import SearchOptions from "@/components/SearchOptions";
 import { GetServerSideProps } from "next";
 import Response from "@/Response";
@@ -10,9 +10,8 @@ import PaginationButtons from "@/components/PaginationButtons";
 import ImageResults from "@/components/ImageResults";
 
 const search = ({ results }: any) => {
+  console.log(results);
   const router = useRouter();
-  const [selected, setSelected] = useState(router.query.searchType || "All");
-  console.log(selected);
   return (
     <div className="flex flex-col">
       <Head>
@@ -31,11 +30,8 @@ const search = ({ results }: any) => {
         />
       </Head>
 
-      <SearchHeader selected={selected} />
-      <SearchOptions
-        selected={selected}
-        setSelected={setSelected}
-      />
+      <SearchHeader />
+      <SearchOptions />
       {router.query.searchType === "image" ? (
         <ImageResults results={results} />
       ) : (

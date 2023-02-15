@@ -17,9 +17,11 @@ export default function Home() {
   const randomSearch = async (e) => {
     e.preventDefault();
     const randomWord = await fetch(
-      `https://random-word-api.herokuapp.com/word?number=1`
-    ).then((response) => response.json());
-    console.log(randomWord);
+      `https://random-word-api.herokuapp.com/word?number=${
+        Math.random() * 1000
+      }`
+    );
+
     if (!randomWord) return;
     else return router.push(`/search?term=${randomWord}&searchType=`);
   };
@@ -72,9 +74,7 @@ export default function Home() {
           <button className="bg-black hover:scale-110 transition-all text-white px-3 py-2 rounded-lg">
             Search
           </button>
-          <button
-            onClick={randomSearch}
-            className="bg-black hover:scale-110 transition-all text-white px-3 py-2 rounded-lg">
+          <button className="bg-black hover:scale-110 transition-all text-white px-3 py-2 rounded-lg">
             Fluke
           </button>
         </div>
