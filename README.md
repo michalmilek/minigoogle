@@ -1,6 +1,6 @@
 <h1 align="center">App based on google search engine API.</h1>
-![Preview photo 1](img1.png)
-![Preview photo 2](img2.png)
+![Preview photo 1](https://github.com/michalmilek/minigoogle/blob/main/img1.png)
+![Preview photo 2](https://github.com/michalmilek/minigoogle/blob/main/img2.png)
 <div align="center">
 </div>
 
